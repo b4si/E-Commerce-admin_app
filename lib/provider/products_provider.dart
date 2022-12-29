@@ -44,4 +44,9 @@ class ProductsProvider with ChangeNotifier {
     discriptionController.clear();
     notifyListeners();
   }
+
+  bannerFieldClear() {
+    image = null;
+    notifyListeners();
+  }
 }

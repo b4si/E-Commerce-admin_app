@@ -1,5 +1,7 @@
 import 'package:coza_admin/banner_screen.dart';
-import 'package:coza_admin/products_screen.dart';
+import 'package:coza_admin/banner_upload_screen.dart';
+import 'package:coza_admin/products_upload_screen.dart';
+import 'package:coza_admin/items_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -24,7 +26,23 @@ class HomeScreen extends StatelessWidget {
           title: const Text('Add Banner'),
           onTap: () => Navigator.of(context).push(
             MaterialPageRoute(
-              builder: ((context) => const BannerScreen()),
+              builder: ((context) => const BannerUploadScreen()),
+            ),
+          ),
+        ),
+        ListTile(
+          title: const Text('View Products'),
+          onTap: () => Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: ((context) => ItemsScreen()),
+            ),
+          ),
+        ),
+        ListTile(
+          title: const Text('View Banners'),
+          onTap: () => Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: ((context) => BannerScreen()),
             ),
           ),
         ),
